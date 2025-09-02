@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ai9</title>
+    <meta name="google-site-verification" content="l6FSehriSN6V1o0fUyEB7SLy7Ym0pepQBHWJM0tbyV0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* General styles and font */
@@ -98,20 +99,16 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 flex flex-col h-screen">
 
-    <!-- Header -->
     <div class="header bg-white dark:bg-gray-800 text-gray-800 dark:text-white p-4 shadow-md flex items-center justify-between sticky top-0 z-10">
         <h1 class="text-xl font-bold">ai9</h1>
         <div class="flex items-center space-x-2">
-            <!-- Settings button on the far left -->
             <button id="settings-button" class="text-gray-600 dark:text-gray-300 focus:outline-none p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.942 3.313.841 2.37 2.373a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.942 1.543-.841 3.313-2.373 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.942-3.313-.841-2.37-2.373a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.942-1.543.841-3.313 2.373-2.37a1.724 1.724 0 002.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
             </button>
         </div>
     </div>
 
-    <!-- Messages Area -->
     <div id="messages" class="flex-1 p-4 overflow-y-auto space-y-4 message-container">
-        <!-- Initial welcome message -->
         <div class="flex justify-start">
             <div class="message-box received-message">
                 مرحباً بك! أنا هنا لمساعدتك في أي شيء تحتاجه. كيف يمكنني أن أخدمك اليوم؟
@@ -119,7 +116,6 @@
         </div>
     </div>
 
-    <!-- Input Area -->
     <div class="input-area p-4 bg-gray-100 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
         <div class="flex items-center space-x-2">
             <input type="file" id="file-upload" accept="image/*" class="hidden">
@@ -142,7 +138,6 @@
         </div>
     </div>
 
-    <!-- Settings Modal -->
     <div id="settings-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden p-4">
         <div class="absolute inset-0 modal-overlay" id="modal-backdrop"></div>
         <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-xl relative max-w-sm w-full mx-4 sm:max-w-md md:max-w-lg lg:max-w-xl modal-content">
@@ -154,7 +149,6 @@
             </div>
             
             <div class="space-y-6">
-                <!-- Theme Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">المظهر</h3>
                     <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
@@ -169,7 +163,6 @@
                     </div>
                 </div>
 
-                <!-- General Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">عام</h3>
                     <button id="clear-chat-button" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200 shadow-md">
@@ -177,7 +170,6 @@
                     </button>
                 </div>
                 
-                <!-- AI Models Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">نماذج الذكاء الاصطناعي</h3>
                     <select id="model-select" class="w-full py-2 px-3 rounded-md border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none">
@@ -187,7 +179,6 @@
                     </select>
                 </div>
 
-                <!-- AI Persona Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">شخصية المساعد</h3>
                     <select id="persona-select" class="w-full py-2 px-3 rounded-md border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none">
@@ -199,7 +190,6 @@
                     </select>
                 </div>
 
-                <!-- Advanced Settings Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">خصائص متقدمة</h3>
                     <ul class="space-y-3">
@@ -214,7 +204,6 @@
                     </ul>
                 </div>
                 
-                <!-- Data Management Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">إدارة البيانات</h3>
                     <ul class="space-y-3">
@@ -225,7 +214,6 @@
                     </ul>
                 </div>
                 
-                <!-- Help Section -->
                 <div>
                     <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">المساعدة</h3>
                     <ul class="space-y-3">
@@ -239,7 +227,6 @@
         </div>
     </div>
     
-    <!-- Application Logic -->
     <script type="module">
         // Firebase SDKs and App Logic
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
@@ -476,12 +463,6 @@
             sendButton.disabled = true;
 
             const tempMessageDiv = displayMessage('جاري الكتابة...', 'received-message', 'temp-loading');
-
-            const payload = {
-                contents: [{
-                    parts: parts
-                }]
-            };
 
             const apiKey = "";
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
